@@ -48,8 +48,16 @@
                 <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
                   <h2 class="card-title font-weight-bold mb-1">Welcome to April! 👋</h2>
                   <p class="card-text mb-2">Please sign-in to your account and start the adventure</p>
-                  <form class="auth-login-form mt-2" action="{{ route('login') }}" method="POST">
+                  <form class="auth-login-form mt-2" action="/login" method="POST">
                   @csrf
+                  @if($errors->any())
+                  <div class="alert alert-danger" role="alert">{{$errors->first()}}</div>
+                  @endif
+                  @if (session('sstatus'))
+                  <div class="alert alert-success" role="alert">
+                      {{ session('sstatus') }}
+                  </div>
+                  @endif
                     <div class="form-group">
                       <label class="form-label" for="login-email">Email</label>
                       <input class="form-control  @error('email') is-invalid @enderror" id="login-email" type="text" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus/>
