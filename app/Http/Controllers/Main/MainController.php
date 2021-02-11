@@ -35,4 +35,10 @@ class MainController extends Controller
         return redirect()->back()->withInput($request->only('email', 'remember'))->withErrors(['Email/Password is Incorrect, Please Check Your Login Details and Try Again']);
              }
       }
+
+      public function logout()
+      {
+          Auth::guard('web')->logout();
+          return redirect('/');
+      }
 }

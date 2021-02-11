@@ -20,3 +20,10 @@ Route::get('/', 'Main\MainController@loginPage')->name('mainloginPage');
 //login
 Route::post('/login', 'Main\MainController@Mainlogin')->name('mainlogin');
 
+
+
+
+//Admin
+Route::get('/admin/home', 'Admin\AdminController@home')->name('AdminHome');
+
+Route::post('logout', 'Main\MainController@logout')->name('user.logout');
