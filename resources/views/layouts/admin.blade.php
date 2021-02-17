@@ -8,43 +8,52 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>Dashboard ecommerce - Vuexy - Bootstrap HTML admin template</title>
+    <title>April Commerce | Admin Dashboard</title>
     <link rel="apple-touch-icon" href="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/app-assets/images/ico/apple-icon-120.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../../app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/charts/apexcharts.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/extensions/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/charts/apexcharts.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/vendors/css/extensions/toastr.min.css">
     <!-- END: Vendor CSS-->
 
     <!-- BEGIN: Theme CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap-extended.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/colors.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/components.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/dark-layout.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/bordered-layout.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/semi-dark-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/css/bootstrap-extended.min.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/css/colors.min.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/css/components.min.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/css/themes/dark-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/css/themes/bordered-layout.min.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/css/themes/semi-dark-layout.min.css">
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/dashboard-ecommerce.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/charts/chart-apex.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/extensions/ext-component-toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/css/core/menu/menu-types/vertical-menu.min.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/css/pages/dashboard-ecommerce.min.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/css/plugins/charts/chart-apex.min.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/css/plugins/extensions/ext-component-toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="../../app-assets/css/loader.css">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
     <!-- END: Custom CSS-->
 
   </head>
   <!-- END: Head-->
 
   <!-- BEGIN: Body-->
-  <body class="vertical-layout vertical-menu-modern  navbar-floating footer-static   menu-collapsed" data-open="click" data-menu="vertical-menu-modern" data-col="">
+  <body  class="demo vertical-layout vertical-menu-modern  navbar-floating footer-static   menu-collapsed" data-open="click" data-menu="vertical-menu-modern" data-col="">
+  <div id="demo-content">
+      <div id="loader-wrapper">
+        <div id="loader"></div>
 
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+      </div>
+<div id="content">
     <!-- BEGIN: Header-->
     <nav class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow">
       <div class="navbar-container d-flex content">
@@ -90,7 +99,7 @@
                 </div>
               </li>
               <li class="scrollable-container media-list">
-                <div class="media align-items-center"><img class="d-block rounded mr-1" src="../../../app-assets/images/pages/eCommerce/1.png" alt="donuts" width="62">
+                <div class="media align-items-center"><img class="d-block rounded mr-1" src="../../app-assets/images/pages/eCommerce/1.png" alt="donuts" width="62">
                   <div class="media-body"><i class="ficon cart-item-remove" data-feather="x"></i>
                     <div class="media-heading">
                       <h6 class="cart-item-title"><a class="text-body" href="app-ecommerce-details.html"> Apple watch 5</a></h6><small class="cart-item-by">By Apple</small>
@@ -103,7 +112,7 @@
                     <h5 class="cart-item-price">$374.90</h5>
                   </div>
                 </div>
-                <div class="media align-items-center"><img class="d-block rounded mr-1" src="../../../app-assets/images/pages/eCommerce/7.png" alt="donuts" width="62">
+                <div class="media align-items-center"><img class="d-block rounded mr-1" src="../../app-assets/images/pages/eCommerce/7.png" alt="donuts" width="62">
                   <div class="media-body"><i class="ficon cart-item-remove" data-feather="x"></i>
                     <div class="media-heading">
                       <h6 class="cart-item-title"><a class="text-body" href="app-ecommerce-details.html"> Google Home Mini</a></h6><small class="cart-item-by">By Google</small>
@@ -116,7 +125,7 @@
                     <h5 class="cart-item-price">$129.40</h5>
                   </div>
                 </div>
-                <div class="media align-items-center"><img class="d-block rounded mr-1" src="../../../app-assets/images/pages/eCommerce/2.png" alt="donuts" width="62">
+                <div class="media align-items-center"><img class="d-block rounded mr-1" src="../../app-assets/images/pages/eCommerce/2.png" alt="donuts" width="62">
                   <div class="media-body"><i class="ficon cart-item-remove" data-feather="x"></i>
                     <div class="media-heading">
                       <h6 class="cart-item-title"><a class="text-body" href="app-ecommerce-details.html"> iPhone 11 Pro</a></h6><small class="cart-item-by">By Apple</small>
@@ -129,7 +138,7 @@
                     <h5 class="cart-item-price">$699.00</h5>
                   </div>
                 </div>
-                <div class="media align-items-center"><img class="d-block rounded mr-1" src="../../../app-assets/images/pages/eCommerce/3.png" alt="donuts" width="62">
+                <div class="media align-items-center"><img class="d-block rounded mr-1" src="../../app-assets/images/pages/eCommerce/3.png" alt="donuts" width="62">
                   <div class="media-body"><i class="ficon cart-item-remove" data-feather="x"></i>
                     <div class="media-heading">
                       <h6 class="cart-item-title"><a class="text-body" href="app-ecommerce-details.html"> iMac Pro</a></h6><small class="cart-item-by">By Apple</small>
@@ -142,7 +151,7 @@
                     <h5 class="cart-item-price">$4,999.00</h5>
                   </div>
                 </div>
-                <div class="media align-items-center"><img class="d-block rounded mr-1" src="../../../app-assets/images/pages/eCommerce/5.png" alt="donuts" width="62">
+                <div class="media align-items-center"><img class="d-block rounded mr-1" src="../../app-assets/images/pages/eCommerce/5.png" alt="donuts" width="62">
                   <div class="media-body"><i class="ficon cart-item-remove" data-feather="x"></i>
                     <div class="media-heading">
                       <h6 class="cart-item-title"><a class="text-body" href="app-ecommerce-details.html"> MacBook Pro</a></h6><small class="cart-item-by">By Apple</small>
@@ -175,7 +184,7 @@
               <li class="scrollable-container media-list"><a class="d-flex" href="javascript:void(0)">
                   <div class="media d-flex align-items-start">
                     <div class="media-left">
-                      <div class="avatar"><img src="../../../app-assets/images/portrait/small/avatar-s-15.jpg" alt="avatar" width="32" height="32"></div>
+                      <div class="avatar"><img src="../../app-assets/images/portrait/small/avatar-s-15.jpg" alt="avatar" width="32" height="32"></div>
                     </div>
                     <div class="media-body">
                       <p class="media-heading"><span class="font-weight-bolder">Congratulation Sam 🎉</span>winner!</p><small class="notification-text"> Won the monthly best seller badge.</small>
@@ -183,7 +192,7 @@
                   </div></a><a class="d-flex" href="javascript:void(0)">
                   <div class="media d-flex align-items-start">
                     <div class="media-left">
-                      <div class="avatar"><img src="../../../app-assets/images/portrait/small/avatar-s-3.jpg" alt="avatar" width="32" height="32"></div>
+                      <div class="avatar"><img src="../../app-assets/images/portrait/small/avatar-s-3.jpg" alt="avatar" width="32" height="32"></div>
                     </div>
                     <div class="media-body">
                       <p class="media-heading"><span class="font-weight-bolder">New message</span>&nbsp;received</p><small class="notification-text"> You have 10 unread messages</small>
@@ -241,7 +250,7 @@
             </ul>
           </li>
           <li class="nav-item dropdown dropdown-user"><a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <div class="user-nav d-sm-flex d-none"><span class="user-name font-weight-bolder">{{Auth::user()->name}}</span><span class="user-status">{{ucfirst(Auth::user()->user_type)}}</span></div><span class="avatar"><img class="round" src="../../../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40"><span class="avatar-status-online"></span></span></a>
+              <div class="user-nav d-sm-flex d-none"><span class="user-name font-weight-bolder">{{Auth::user()->name}}</span><span class="user-status">{{ucfirst(Auth::user()->user_type)}}</span></div><span class="avatar"><img class="round" src="../../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40"><span class="avatar-status-online"></span></span></a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-user"><a class="dropdown-item" href="page-profile.html"><i class="mr-50" data-feather="user"></i> Profile</a><a class="dropdown-item" href="app-email.html"><i class="mr-50" data-feather="mail"></i> Inbox</a><a class="dropdown-item" href="app-todo.html"><i class="mr-50" data-feather="check-square"></i> Task</a><a class="dropdown-item" href="app-chat.html"><i class="mr-50" data-feather="message-square"></i> Chats</a>
               <div class="dropdown-divider"></div><a class="dropdown-item" href="page-account-settings.html"><i class="mr-50" data-feather="settings"></i> Settings</a><a class="dropdown-item" href="page-pricing.html"><i class="mr-50" data-feather="credit-card"></i> Pricing</a><a class="dropdown-item" href="page-faq.html"><i class="mr-50" data-feather="help-circle"></i> FAQ</a><a class="dropdown-item" href="{{ route('user.logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();"><i class="mr-50" data-feather="power"></i> Logout</a>
@@ -258,28 +267,28 @@
           <h6 class="section-label mt-75 mb-0">Files</h6></a></li>
       <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
           <div class="d-flex">
-            <div class="mr-75"><img src="../../../app-assets/images/icons/xls.png" alt="png" height="32"></div>
+            <div class="mr-75"><img src="../../app-assets/images/icons/xls.png" alt="png" height="32"></div>
             <div class="search-data">
               <p class="search-data-title mb-0">Two new item submitted</p><small class="text-muted">Marketing Manager</small>
             </div>
           </div><small class="search-data-size mr-50 text-muted">&apos;17kb</small></a></li>
       <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
           <div class="d-flex">
-            <div class="mr-75"><img src="../../../app-assets/images/icons/jpg.png" alt="png" height="32"></div>
+            <div class="mr-75"><img src="../../app-assets/images/icons/jpg.png" alt="png" height="32"></div>
             <div class="search-data">
               <p class="search-data-title mb-0">52 JPG file Generated</p><small class="text-muted">FontEnd Developer</small>
             </div>
           </div><small class="search-data-size mr-50 text-muted">&apos;11kb</small></a></li>
       <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
           <div class="d-flex">
-            <div class="mr-75"><img src="../../../app-assets/images/icons/pdf.png" alt="png" height="32"></div>
+            <div class="mr-75"><img src="../../app-assets/images/icons/pdf.png" alt="png" height="32"></div>
             <div class="search-data">
               <p class="search-data-title mb-0">25 PDF File Uploaded</p><small class="text-muted">Digital Marketing Manager</small>
             </div>
           </div><small class="search-data-size mr-50 text-muted">&apos;150kb</small></a></li>
       <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between w-100" href="app-file-manager.html">
           <div class="d-flex">
-            <div class="mr-75"><img src="../../../app-assets/images/icons/doc.png" alt="png" height="32"></div>
+            <div class="mr-75"><img src="../../app-assets/images/icons/doc.png" alt="png" height="32"></div>
             <div class="search-data">
               <p class="search-data-title mb-0">Anna_Strong.doc</p><small class="text-muted">Web Designer</small>
             </div>
@@ -288,28 +297,28 @@
           <h6 class="section-label mt-75 mb-0">Members</h6></a></li>
       <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view.html">
           <div class="d-flex align-items-center">
-            <div class="avatar mr-75"><img src="../../../app-assets/images/portrait/small/avatar-s-8.jpg" alt="png" height="32"></div>
+            <div class="avatar mr-75"><img src="../../app-assets/images/portrait/small/avatar-s-8.jpg" alt="png" height="32"></div>
             <div class="search-data">
               <p class="search-data-title mb-0">Test</p><small class="text-muted">UI designer</small>
             </div>
           </div></a></li>
       <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view.html">
           <div class="d-flex align-items-center">
-            <div class="avatar mr-75"><img src="../../../app-assets/images/portrait/small/avatar-s-1.jpg" alt="png" height="32"></div>
+            <div class="avatar mr-75"><img src="../../app-assets/images/portrait/small/avatar-s-1.jpg" alt="png" height="32"></div>
             <div class="search-data">
               <p class="search-data-title mb-0">Michal Clark</p><small class="text-muted">FontEnd Developer</small>
             </div>
           </div></a></li>
       <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view.html">
           <div class="d-flex align-items-center">
-            <div class="avatar mr-75"><img src="../../../app-assets/images/portrait/small/avatar-s-14.jpg" alt="png" height="32"></div>
+            <div class="avatar mr-75"><img src="../../app-assets/images/portrait/small/avatar-s-14.jpg" alt="png" height="32"></div>
             <div class="search-data">
               <p class="search-data-title mb-0">Milena Gibson</p><small class="text-muted">Digital Marketing Manager</small>
             </div>
           </div></a></li>
       <li class="auto-suggestion"><a class="d-flex align-items-center justify-content-between py-50 w-100" href="app-user-view.html">
           <div class="d-flex align-items-center">
-            <div class="avatar mr-75"><img src="../../../app-assets/images/portrait/small/avatar-s-6.jpg" alt="png" height="32"></div>
+            <div class="avatar mr-75"><img src="../../app-assets/images/portrait/small/avatar-s-6.jpg" alt="png" height="32"></div>
             <div class="search-data">
               <p class="search-data-title mb-0">Anna Strong</p><small class="text-muted">Web Designer</small>
             </div>
@@ -359,25 +368,25 @@
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
           <li class=" nav-item"><a class="d-flex align-items-center" href="index.html"><i data-feather="home"></i><span class="menu-title text-truncate" data-i18n="Dashboards">Dashboards</span><span class="badge badge-light-warning badge-pill ml-auto mr-1">2</span></a>
             <ul class="menu-content">
-              <li><a class="d-flex align-items-center" href="dashboard-analytics.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Analytics">Analytics</span></a>
-              </li>
-              <li class="active"><a class="d-flex align-items-center" href="dashboard-ecommerce.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">eCommerce</span></a>
+              <!--li><a class="d-flex align-items-center" href="dashboard-analytics.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Analytics">Analytics</span></a>
+              </li-->
+              <li class="active"><a class="d-flex align-items-center" href="/admin/home"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="eCommerce">Home</span></a>
               </li>
             </ul>
           </li>
-          <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">Apps &amp; Pages</span><i data-feather="more-horizontal"></i>
+          <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">Seller &amp; Information</span><i data-feather="more-horizontal"></i>
           </li>
-          <li class=" nav-item"><a class="d-flex align-items-center" href="app-email.html"><i data-feather="mail"></i><span class="menu-title text-truncate" data-i18n="Email">Email</span></a>
+          <li class=" nav-item"><a class="d-flex align-items-center" href="/seller-list"><i data-feather="user"></i><span class="menu-title text-truncate" data-i18n="Email">Seller Approvals</span></a>
           </li>
-          <li class=" nav-item"><a class="d-flex align-items-center" href="app-chat.html"><i data-feather="message-square"></i><span class="menu-title text-truncate" data-i18n="Chat">Chat</span></a>
+          <!--li class=" nav-item"><a class="d-flex align-items-center" href="app-chat.html"><i data-feather="message-square"></i><span class="menu-title text-truncate" data-i18n="Chat">Chat</span></a>
           </li>
           <li class=" nav-item"><a class="d-flex align-items-center" href="app-todo.html"><i data-feather="check-square"></i><span class="menu-title text-truncate" data-i18n="Todo">Todo</span></a>
           </li>
           <li class=" nav-item"><a class="d-flex align-items-center" href="app-calendar.html"><i data-feather="calendar"></i><span class="menu-title text-truncate" data-i18n="Calendar">Calendar</span></a>
           </li>
           <li class=" nav-item"><a class="d-flex align-items-center" href="app-kanban.html"><i data-feather="grid"></i><span class="menu-title text-truncate" data-i18n="Kanban">Kanban</span></a>
-          </li>
-          <li class=" nav-item"><a class="d-flex align-items-center" href="dashboard-ecommerce.html#"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Invoice">Invoice</span></a>
+          </li-->
+          <!--li class=" nav-item"><a class="d-flex align-items-center" href="dashboard-ecommerce.html#"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Invoice">Invoice</span></a>
             <ul class="menu-content">
               <li><a class="d-flex align-items-center" href="app-invoice-list.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">List</span></a>
               </li>
@@ -390,8 +399,8 @@
             </ul>
           </li>
           <li class=" nav-item"><a class="d-flex align-items-center" href="app-file-manager.html"><i data-feather="save"></i><span class="menu-title text-truncate" data-i18n="File Manager">File Manager</span></a>
-          </li>
-          <li class=" nav-item"><a class="d-flex align-items-center" href="dashboard-ecommerce.html#"><i data-feather="shopping-cart"></i><span class="menu-title text-truncate" data-i18n="eCommerce">eCommerce</span></a>
+          </li-->
+          <!--li class=" nav-item"><a class="d-flex align-items-center" href="dashboard-ecommerce.html#"><i data-feather="shopping-cart"></i><span class="menu-title text-truncate" data-i18n="eCommerce">eCommerce</span></a>
             <ul class="menu-content">
               <li><a class="d-flex align-items-center" href="app-ecommerce-shop.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Shop">Shop</span></a>
               </li>
@@ -556,8 +565,8 @@
               <li><a class="d-flex align-items-center" href="component-tooltips.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Tooltips">Tooltips</span></a>
               </li>
             </ul>
-          </li>
-          <li class=" nav-item"><a class="d-flex align-items-center" href="dashboard-ecommerce.html#"><i data-feather="box"></i><span class="menu-title text-truncate" data-i18n="Extensions">Extensions</span></a>
+          </li-->
+          <!--li class=" nav-item"><a class="d-flex align-items-center" href="dashboard-ecommerce.html#"><i data-feather="box"></i><span class="menu-title text-truncate" data-i18n="Extensions">Extensions</span></a>
             <ul class="menu-content">
               <li><a class="d-flex align-items-center" href="ext-component-sweet-alerts.html"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Sweet Alert">Sweet Alert</span></a>
               </li>
@@ -684,7 +693,7 @@
           <li class=" nav-item"><a class="d-flex align-items-center" href="https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/documentation"><i data-feather="folder"></i><span class="menu-title text-truncate" data-i18n="Documentation">Documentation</span></a>
           </li>
           <li class=" nav-item"><a class="d-flex align-items-center" href="https://pixinvent.ticksy.com/"><i data-feather="life-buoy"></i><span class="menu-title text-truncate" data-i18n="Raise Support">Raise Support</span></a>
-          </li>
+          </li-->
         </ul>
       </div>
     </div>
@@ -693,6 +702,8 @@
 
     @yield('content')
  <!-- BEGIN: Customizer-->
+ </div>
+ </div>
  <div class="customizer d-none d-md-block"><a class="customizer-toggle d-flex align-items-center justify-content-center" href="javascript:void(0);"><i class="spinner" data-feather="settings"></i></a><div class="customizer-content">
   <!-- Customizer header -->
   <div class="customizer-header px-2 pt-1 pb-0 position-relative">
@@ -843,38 +854,35 @@
     </div>
     <!-- End: Customizer-->
 
-    <!-- Buynow Button-->
-    <div class="buy-now"><a href="https://1.envato.market/vuexy_admin" target="_blank" class="btn btn-danger">Buy Now</a>
-
     </div>
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
 
     <!-- BEGIN: Footer-->
     <footer class="footer footer-static footer-light">
-      <p class="clearfix mb-0"><span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT  &copy; 2020<a class="ml-25" href="https://1.envato.market/pixinvent_portfolio" target="_blank">Pixinvent</a><span class="d-none d-sm-inline-block">, All rights Reserved</span></span><span class="float-md-right d-none d-md-block">Hand-crafted & Made with<i data-feather="heart"></i></span></p>
+      <p class="clearfix mb-0"><span class="float-md-left d-block d-md-inline-block mt-25">COPYRIGHT  &copy; 2021<a class="ml-25" href="http://sourcewithapril.com" target="_blank">Source with April</a><span class="d-none d-sm-inline-block">, All rights Reserved</span></span><span class="float-md-right d-none d-md-block">Hand-crafted & Made with<i data-feather="heart"></i></span></p>
     </footer>
     <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
     <!-- END: Footer-->
 
 
     <!-- BEGIN: Vendor JS-->
-    <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
+    <script src="../../app-assets/vendors/js/vendors.min.js"></script>
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="../../../app-assets/vendors/js/charts/apexcharts.min.js"></script>
-    <script src="../../../app-assets/vendors/js/extensions/toastr.min.js"></script>
+    <script src="../../app-assets/vendors/js/charts/apexcharts.min.js"></script>
+    <script src="../../app-assets/vendors/js/extensions/toastr.min.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
-    <script src="../../../app-assets/js/core/app-menu.min.js"></script>
-    <script src="../../../app-assets/js/core/app.min.js"></script>
-    <script src="../../../app-assets/js/scripts/customizer.min.js"></script>
+    <script src="../../app-assets/js/core/app-menu.min.js"></script>
+    <script src="../../app-assets/js/core/app.min.js"></script>
+    <script src="../../app-assets/js/scripts/customizer.min.js"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="../../../app-assets/js/scripts/pages/dashboard-ecommerce.min.js"></script>
+    <script src="../../app-assets/js/scripts/pages/dashboard-ecommerce.min.js"></script>
     <!-- END: Page JS-->
 
     <script>

@@ -15,15 +15,23 @@ use App\Http\Controllers\Main\MainController;
 |
 */
 
+
 Route::get('/', 'Main\MainController@loginPage')->name('mainloginPage');
 
-//login
+//login & Logout
 Route::post('/login', 'Main\MainController@Mainlogin')->name('mainlogin');
-
+Route::get('/SellerRegister', 'Main\MainController@SellerRegister')->name('sreg');
+Route::post('/SRegister', 'Main\MainController@SellerRegisterSubmit')->name('sellerregister');
+Route::post('logout', 'Main\MainController@logout')->name('user.logout');
 
 
 
 //Admin
 Route::get('/admin/home', 'Admin\AdminController@home')->name('AdminHome');
+Route::get('/seller-list', 'Admin\AdminController@SellerList');
 
-Route::post('logout', 'Main\MainController@logout')->name('user.logout');
+
+//Seller
+Route::get('/seller/home', 'Seller\SellerController@home');
+
+
