@@ -32,6 +32,8 @@ Route::get('/seller-list', 'Admin\AdminController@SellerList');
 
 
 //Seller
+Route::post('/saveSeller', 'Seller\SellerController@SaveSeller');
 Route::get('/seller/home', 'Seller\SellerController@home');
+
 
 

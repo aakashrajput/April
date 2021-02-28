@@ -42,7 +42,7 @@
               <!-- /Brand logo-->
               <!-- Left Text-->
               <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
-                <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="../../../app-assets/images/pages/register-v2.svg" alt="Register V2"/></div>
+                <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="../../app-assets/images/pages/register-v2.svg" alt="Register V2"/></div>
               </div>
               <!-- /Left Text-->
               <!-- Register-->
@@ -141,20 +141,20 @@
 
 
     <!-- BEGIN: Vendor JS-->
-    <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
+    <script src="../../app-assets/vendors/js/vendors.min.js"></script>
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="../../../app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
+    <script src="../../app-assets/vendors/js/forms/validation/jquery.validate.min.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
-    <script src="../../../app-assets/js/core/app-menu.min.js"></script>
-    <script src="../../../app-assets/js/core/app.min.js"></script>
+    <script src="../../app-assets/js/core/app-menu.min.js"></script>
+    <script src="../../app-assets/js/core/app.min.js"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="../../../app-assets/js/scripts/pages/page-auth-register.min.js"></script>
+    <script src="../../app-assets/js/scripts/pages/page-auth-register.min.js"></script>
     <!-- END: Page JS-->
 
     <script>

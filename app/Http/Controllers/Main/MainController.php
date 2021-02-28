@@ -13,6 +13,10 @@ use App\Models\User;
 class MainController extends Controller
 {
     //
+    /*public function __construct()
+    {
+        $this->middleware('guest');
+    }*/
 
     public function loginPage()
     {
@@ -62,7 +66,7 @@ class MainController extends Controller
         $user_type="Seller";
         $accounttype = 'Not Approved';
         
-        User::create(request(['name', 'email', 'password', 'user_type']));
+        $seller =  User::create(request(['name', 'email', 'password', 'user_type']));
         DB::update('update users set accountstatus = ? where email = ?',[$accounttype, $email]);
 
 
@@ -70,7 +74,9 @@ class MainController extends Controller
         //Mail::to($email)->send(new EmployeeReg());
         //$dat = new EmployeeReg(); // sendgrid_api
         //$dat->send($request);
-        return view('seller.home');
+        auth()->login($seller);
+
+        return redirect('/seller/home');
 
     }
 

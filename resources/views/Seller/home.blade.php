@@ -1,4 +1,4 @@
-@extends('layouts.SellerMain')
+@extends('layouts.sellerMain')
 
 @section('content')
 
@@ -17,484 +17,983 @@
         <strong>Info:</strong> Your Seller Acount is Not Active Now&nbsp;
       </div>
       </div>
-      <div class="content-wrapper">
-      
-        <div class="content-header row">
-          <div class="content-header-left col-md-9 col-12 mb-2">
-            <div class="row breadcrumbs-top">
-              <div class="col-12">
-                <h2 class="content-header-title float-left mb-0">Seller Information Portal</h2>
-              </div>
-            </div>
-          </div>
-          <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
-            <div class="form-group breadcrumb-right">
-              
-            </div>
-          </div>
-        </div>
-        <div class="content-body">
-            <!-- Vertical Wizard -->
-            <section class="vertical-wizard">
-                <div class="bs-stepper vertical vertical-wizard-example">
-                    <div class="bs-stepper-header">
-                    <div class="step" data-target="#account-details-vertical">
-                        <button type="button" class="step-trigger">
-                        <span class="bs-stepper-box">1</span>
-                        <span class="bs-stepper-label">
-                            <span class="bs-stepper-title">Account Details</span>
-                            <span class="bs-stepper-subtitle">Setup Account Details</span>
-                        </span>
-                        </button>
-                    </div>
-                    <div class="step" data-target="#address-step-vertical">
-                        <button type="button" class="step-trigger">
-                        <span class="bs-stepper-box">2</span>
-                        <span class="bs-stepper-label">
-                            <span class="bs-stepper-title">Address</span>
-                            <span class="bs-stepper-subtitle">Add Address</span>
-                        </span>
-                        </button>
-                    </div>
-                    <div class="step" data-target="#social-links-vertical">
-                        <button type="button" class="step-trigger">
-                        <span class="bs-stepper-box">3</span>
-                        <span class="bs-stepper-label">
-                            <span class="bs-stepper-title">Gov ID's</span>
-                            <span class="bs-stepper-subtitle">Add Gov ID's</span>
-                        </span>
-                        </button>
-                    </div>
-                    <div class="step" data-target="#document-links-vertical">
-                        <button type="button" class="step-trigger">
-                        <span class="bs-stepper-box">4</span>
-                        <span class="bs-stepper-label">
-                            <span class="bs-stepper-title">Require Documents</span>
-                            <span class="bs-stepper-subtitle">Upload Documents</span>
-                        </span>
-                        </button>
-                    </div>
-                    </div>
-                    <div class="bs-stepper-content">
-                    <div id="account-details-vertical" class="content">
-                        <div class="content-header">
-                        <h5 class="mb-0">Seller Account Details</h5>
-                        <small class="text-muted">Enter Your Account Details.</small>
-                        </div>
-                        <div class="row">
-                        <div class="form-group col-md-6">
-                            <label class="form-label" for="vertical-username">Username</label>
-                            <input type="text" id="vertical-username" class="form-control" placeholder="johndoe" />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="form-label" for="vertical-email">Email</label>
-                            <input
-                            type="email"
-                            id="vertical-email"
-                            class="form-control"
-                            placeholder="john.doe@email.com"
-                            aria-label="john.doe"
-                            />
-                        </div>
-                        </div>
-                        <div class="row">
-                        <div class="form-group form-password-toggle col-md-6">
-                            <label class="form-label" for="vertical-password">Full Name</label>
-                            <input
-                            type="Text"
-                            id="vertical-name"
-                            class="form-control"
-                            placeholder="Ram Lal"
-                            />
-                        </div>
-                        <div class="form-group form-password-toggle col-md-6">
-                            <label class="form-label" for="vertical-password">Initial Product Category</label>
-                            <select class="form-control" name="" id="">
-                                <option value="Wheat">Wheat</option>
-                                <option value="Rice">Rice</option>
-                                <option value="Ragi">Ragi</option>
-                                <option value="Barley">Barley</option>
-                            </select>
-                        </div>
-                        <div class="form-group form-password-toggle col-md-6">
-                            <label class="form-label" for="vertical-confirm-password">Phone No</label>
-                            <input
-                            type="number"
-                            id="vertical-confirm-password"
-                            class="form-control"
-                            placeholder="+91"
-                            />
-                        </div>
-                        <div class="form-group form-password-toggle col-md-6">
-                            <label class="form-label" for="vertical-confirm-password">Alternate Phone No</label>
-                            <input
-                            type="number"
-                            id="vertical-confirm-password"
-                            class="form-control"
-                            placeholder="+91"
-                            />
-                        </div>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                        <button class="btn btn-outline-secondary btn-prev" disabled>
-                            <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
-                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
-                        </button>
-                        <button class="btn btn-primary btn-next">
-                            <span class="align-middle d-sm-inline-block d-none">Next</span>
-                            <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
-                        </button>
-                        </div>
-                    </div>
-                    <div id="address-step-vertical" class="content">
-                        <div class="content-header">
-                        <h5 class="mb-0">Address</h5>
-                        <small>Enter Your Address.</small>
-                        </div>
-                        <div class="row">
-                        <div class="form-group col-md-6">
-                            <label class="form-label" for="vertical-address">Address</label>
-                            <input
-                            type="text"
-                            id="vertical-address"
-                            class="form-control"
-                            placeholder="98  Borough bridge Road, Birmingham"
-                            />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="form-label" for="vertical-landmark">Landmark</label>
-                            <input type="text" id="vertical-landmark" class="form-control" placeholder="Borough bridge" />
-                        </div>
-                        </div>
-                        <div class="row">
-                        <div class="form-group col-md-6">
-                            <label class="form-label" for="pincode2">Pincode</label>
-                            <input type="text" id="pincode2" class="form-control" placeholder="658921" />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="form-label" for="city2">City</label>
-                            <input type="text" id="city2" class="form-control" placeholder="Birmingham" />
-                        </div>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                        <button class="btn btn-primary btn-prev">
-                            <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
-                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
-                        </button>
-                        <button class="btn btn-primary btn-next">
-                            <span class="align-middle d-sm-inline-block d-none">Next</span>
-                            <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
-                        </button>
-                        </div>
-                    </div>
-                    <div id="social-links-vertical" class="content">
-                        <div class="content-header">
-                        <h5 class="mb-0">Gov ID's</h5>
-                        <small>Enter Your Goverment ID's Number.</small>
-                        </div>
-                        <div class="row">
-                        <div class="form-group col-md-6">
-                            <label class="form-label" for="vertical-twitter">Adhar Card</label>
-                            <input type="text" id="vertical-twitter" class="form-control" placeholder="xxxx-xxxx-xxxx" />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="form-label" for="vertical-facebook">Pan Card</label>
-                            <input type="text" id="vertical-facebook" class="form-control" placeholder="xxxxxx" />
-                        </div>
-                        </div>
-                        <div class="row">
-                        <div class="form-group col-md-6">
-                            <label class="form-label" for="vertical-google">Voter ID</label>
-                            <input type="text" id="vertical-google" class="form-control" placeholder="xxxxxx" />
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label class="form-label" for="vertical-linkedin">Driving License</label>
-                            <input type="text" id="vertical-linkedin" class="form-control" placeholder="xxxxxx" />
-                        </div>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                        <button class="btn btn-primary btn-prev">
-                            <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
-                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
-                        </button>
-                        <button class="btn btn-primary btn-next">
-                            <span class="align-middle d-sm-inline-block d-none">Next</span>
-                            <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
-                        </button>
-                        </div>
-                    </div>
-                    <div id="document-links-vertical" class="content">
-                        <div class="content-header">
-                        <h5 class="mb-0">Required Documents</h5>
-                        <small>Upload Your Required Documents</small>
-                        </div>
-                        <div class="row">
-                        <div class="form-group col-md-6">
-                            <label class="form-label" for="vertical-twitter">Upload File</label>
-                            <input type="file" id="vertical-twitter" class="form-control" placeholder="test" />
-                        </div>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                        <button class="btn btn-primary btn-prev">
-                            <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
-                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
-                        </button>
-                        <button class="btn btn-success btn-submit">Submit</button>
-                        </div>
+      @if(empty($note))
+        @if(session('status'))
+            <h2>Details Under Verification.</h2>
+        @else
+
+            <div class="content-wrapper">
+                
+                <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                    <div class="col-12">
+                        <h2 class="content-header-title float-left mb-0">Seller Information Portal</h2>
                     </div>
                     </div>
                 </div>
-            </section>
-
-            <!--section class="horizontal-wizard">
-                <div class="bs-stepper horizontal-wizard-example linear">
-                    <div class="bs-stepper-header">
-                        <div class="step active" data-target="#account-details">
-                            <button type="button" class="step-trigger" aria-selected="true">
+                <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
+                    <div class="form-group breadcrumb-right">
+                    
+                    </div>
+                </div>
+                </div>
+                <div class="content-body">
+                    <!-- Vertical Wizard -->
+                    <section class="vertical-wizard">
+                        <div class="bs-stepper vertical vertical-wizard-example">
+                            <div class="bs-stepper-header">
+                            <div class="step" data-target="#account-details-vertical">
+                                <button type="button" class="step-trigger">
                                 <span class="bs-stepper-box">1</span>
                                 <span class="bs-stepper-label">
                                     <span class="bs-stepper-title">Account Details</span>
                                     <span class="bs-stepper-subtitle">Setup Account Details</span>
                                 </span>
-                            </button>
-                        </div>
-                        <div class="line">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right font-medium-2">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                        </div>
-                        <div class="step" data-target="#personal-info">
-                            <button type="button" class="step-trigger" aria-selected="false" disabled="disabled">
+                                </button>
+                            </div>
+                            <div class="step" data-target="#address-step-vertical">
+                                <button type="button" class="step-trigger">
                                 <span class="bs-stepper-box">2</span>
-                                <span class="bs-stepper-label">
-                                    <span class="bs-stepper-title">Personal Info</span>
-                                    <span class="bs-stepper-subtitle">Add Personal Info</span>
-                                </span>
-                            </button>
-                        </div>
-                        <div class="line">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right font-medium-2">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                        </div>
-                        <div class="step" data-target="#address-step">
-                            <button type="button" class="step-trigger" aria-selected="false" disabled="disabled">
-                                <span class="bs-stepper-box">3</span>
                                 <span class="bs-stepper-label">
                                     <span class="bs-stepper-title">Address</span>
                                     <span class="bs-stepper-subtitle">Add Address</span>
                                 </span>
-                            </button>
-                        </div>
-                        <div class="line">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right font-medium-2">
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                        </div>
-                        <div class="step" data-target="#social-links">
-                            <button type="button" class="step-trigger" aria-selected="false" disabled="disabled">
+                                </button>
+                            </div>
+                            <div class="step" data-target="#social-links-vertical">
+                                <button type="button" class="step-trigger">
+                                <span class="bs-stepper-box">3</span>
+                                <span class="bs-stepper-label">
+                                    <span class="bs-stepper-title">Gov ID's</span>
+                                    <span class="bs-stepper-subtitle">Add Gov ID's</span>
+                                </span>
+                                </button>
+                            </div>
+                            <div class="step" data-target="#document-links-vertical">
+                                <button type="button" class="step-trigger">
                                 <span class="bs-stepper-box">4</span>
                                 <span class="bs-stepper-label">
-                                    <span class="bs-stepper-title">Social Links</span>
-                                    <span class="bs-stepper-subtitle">Add Social Links</span>
+                                    <span class="bs-stepper-title">Require Documents</span>
+                                    <span class="bs-stepper-subtitle">Upload Documents</span>
                                 </span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="bs-stepper-content">
-                        <div id="account-details" class="content active dstepper-block">
-                            <div class="content-header">
-                                <h5 class="mb-0">Account Details</h5>
+                                </button>
+                            </div>
+                            </div>
+                            <div class="bs-stepper-content">
+                            <form action="/saveSeller" method="POST">
+                            @csrf
+                            <div id="account-details-vertical" class="content">
+                                <div class="content-header">
+                                <h5 class="mb-0">Seller Account Details</h5>
                                 <small class="text-muted">Enter Your Account Details.</small>
-                            </div>
-                            <form novalidate="novalidate">
-                                <div class="row">
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="username">Username</label>
-                                        <input type="text" name="username" id="username" class="form-control error" placeholder="johndoe" aria-describedby="username-error"><span id="username-error" class="error">This field is required.</span>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="email">Email</label>
-                                        <input type="email" name="email" id="email" class="form-control error" placeholder="john.doe@email.com" aria-label="john.doe" aria-describedby="email-error"><span id="email-error" class="error">This field is required.</span>
-                                    </div>
                                 </div>
                                 <div class="row">
-                                    <div class="form-group form-password-toggle col-md-6">
-                                        <label class="form-label" for="password">Password</label>
-                                        <input type="password" name="password" id="password" class="form-control error" placeholder="············" aria-describedby="password-error"><span id="password-error" class="error">This field is required.</span>
-                                    </div>
-                                    <div class="form-group form-password-toggle col-md-6">
-                                        <label class="form-label" for="confirm-password">Confirm Password</label>
-                                        <input type="password" name="confirm-password" id="confirm-password" class="form-control error" placeholder="············" aria-describedby="confirm-password-error"><span id="confirm-password-error" class="error">This field is required.</span>
-                                    </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-username">Username</label>
+                                    <input type="text" id="vertical-username" name="username" class="form-control" placeholder="johndoe" />
                                 </div>
-                            </form>
-                            <div class="d-flex justify-content-between">
-                                <button class="btn btn-outline-secondary btn-prev waves-effect" disabled="">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left align-middle mr-sm-25 mr-0">
-                                        <line x1="19" y1="12" x2="5" y2="12"></line>
-                                        <polyline points="12 19 5 12 12 5"></polyline>
-                                    </svg>
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-email">Email</label>
+                                    <input
+                                    type="email" name="email"
+                                    id="vertical-email"
+                                    class="form-control"
+                                    value="{{Auth::user()->email}}"
+                                    aria-label="john.doe" disabled
+                                    />
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="form-group form-password-toggle col-md-6">
+                                    <label class="form-label" for="vertical-password">Full Name</label>
+                                    <input
+                                    type="Text" name="fullname"
+                                    id="vertical-name"
+                                    class="form-control"
+                                    placeholder="Ram Lal"
+                                    />
+                                </div>
+                                <div class="form-group form-password-toggle col-md-6">
+                                    <label class="form-label" for="vertical-password">Initial Product Category</label>
+                                    <select class="form-control" name="productCat" id="">
+                                        <option value="Wheat">Wheat</option>
+                                        <option value="Rice">Rice</option>
+                                        <option value="Ragi">Ragi</option>
+                                        <option value="Barley">Barley</option>
+                                    </select>
+                                </div>
+                                <div class="form-group form-password-toggle col-md-6">
+                                    <label class="form-label" for="vertical-confirm-password">Phone No</label>
+                                    <input
+                                    type="number" name="phone1"
+                                    id="vertical-confirm-password"
+                                    class="form-control"
+                                    placeholder="+91"
+                                    />
+                                </div>
+                                <div class="form-group form-password-toggle col-md-6">
+                                    <label class="form-label" for="vertical-confirm-password">Alternate Phone No</label>
+                                    <input
+                                    type="number" name="phone2"
+                                    id="vertical-confirm-password"
+                                    class="form-control"
+                                    placeholder="+91"
+                                    />
+                                </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-outline-secondary btn-prev" disabled>
+                                    <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
                                     <span class="align-middle d-sm-inline-block d-none">Previous</span>
                                 </button>
-                                <button class="btn btn-primary btn-next waves-effect waves-float waves-light">
+                                <button type="button" class="btn btn-primary btn-next">
                                     <span class="align-middle d-sm-inline-block d-none">Next</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right align-middle ml-sm-25 ml-0">
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                        <polyline points="12 5 19 12 12 19"></polyline>
-                                    </svg>
+                                    <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
                                 </button>
-                            </div>
-                        </div>
-                        <div id="personal-info" class="content">
-                            <div class="content-header">
-                                <h5 class="mb-0">Personal Info</h5>
-                                <small>Enter Your Personal Info.</small>
-                            </div>
-                            <form novalidate="novalidate">
-                                <div class="row">
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="first-name">First Name</label>
-                                        <input type="text" name="first-name" id="first-name" class="form-control" placeholder="John">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="last-name">Last Name</label>
-                                        <input type="text" name="last-name" id="last-name" class="form-control" placeholder="Doe">
-                                    </div>
                                 </div>
-                                <div class="row">
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="country">Country</label>
-                                        <div class="position-relative"><select class="select2 w-100 select2-hidden-accessible" name="country" id="country" data-select2-id="country" tabindex="-1" aria-hidden="true">
-                                                <option label=" " data-select2-id="2"></option>
-                                                <option>UK</option>
-                                                <option>USA</option>
-                                                <option>Spain</option>
-                                                <option>France</option>
-                                                <option>Italy</option>
-                                                <option>Australia</option>
-                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-country-container"><span class="select2-selection__rendered" id="select2-country-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Select value</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="language">Language</label>
-                                        <div class="position-relative"><select class="select2 w-100 select2-hidden-accessible" name="language" id="language" multiple="" data-select2-id="language" tabindex="-1" aria-hidden="true">
-                                                <option>English</option>
-                                                <option>French</option>
-                                                <option>Spanish</option>
-                                            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="3" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false">
-                                                        <ul class="select2-selection__rendered">
-                                                            <li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="Select value" style="width: 0px;"></li>
-                                                        </ul>
-                                                    </span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></div>
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="d-flex justify-content-between">
-                                <button class="btn btn-primary btn-prev waves-effect waves-float waves-light">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left align-middle mr-sm-25 mr-0">
-                                        <line x1="19" y1="12" x2="5" y2="12"></line>
-                                        <polyline points="12 19 5 12 12 5"></polyline>
-                                    </svg>
-                                    <span class="align-middle d-sm-inline-block d-none">Previous</span>
-                                </button>
-                                <button class="btn btn-primary btn-next waves-effect waves-float waves-light">
-                                    <span class="align-middle d-sm-inline-block d-none">Next</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right align-middle ml-sm-25 ml-0">
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                        <polyline points="12 5 19 12 12 19"></polyline>
-                                    </svg>
-                                </button>
                             </div>
-                        </div>
-                        <div id="address-step" class="content">
-                            <div class="content-header">
+                            <div id="address-step-vertical" class="content">
+                                <div class="content-header">
                                 <h5 class="mb-0">Address</h5>
                                 <small>Enter Your Address.</small>
-                            </div>
-                            <form novalidate="novalidate">
-                                <div class="row">
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="address">Address</label>
-                                        <input type="text" id="address" name="address" class="form-control" placeholder="98  Borough bridge Road, Birmingham">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="landmark">Landmark</label>
-                                        <input type="text" name="landmark" id="landmark" class="form-control" placeholder="Borough bridge">
-                                    </div>
                                 </div>
                                 <div class="row">
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="pincode1">Pincode</label>
-                                        <input type="text" id="pincode1" class="form-control" placeholder="658921">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="city1">City</label>
-                                        <input type="text" id="city1" class="form-control" placeholder="Birmingham">
-                                    </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-address">Address</label>
+                                    <input
+                                    type="text" name="address"
+                                    id="vertical-address"
+                                    class="form-control"
+                                    placeholder="98  Borough bridge Road, Birmingham"
+                                    />
                                 </div>
-                            </form>
-                            <div class="d-flex justify-content-between">
-                                <button class="btn btn-primary btn-prev waves-effect waves-float waves-light">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left align-middle mr-sm-25 mr-0">
-                                        <line x1="19" y1="12" x2="5" y2="12"></line>
-                                        <polyline points="12 19 5 12 12 5"></polyline>
-                                    </svg>
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-landmark">Landmark</label>
+                                    <input type="text" name="landmark" id="vertical-landmark" class="form-control" placeholder="Borough bridge" />
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="pincode2">Pincode</label>
+                                    <input type="text" id="pincode2" name="pincode" class="form-control" placeholder="658921" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="city2">City</label>
+                                    <input type="text" id="city2" name="city" class="form-control" placeholder="Birmingham" />
+                                </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-primary btn-prev">
+                                    <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
                                     <span class="align-middle d-sm-inline-block d-none">Previous</span>
                                 </button>
-                                <button class="btn btn-primary btn-next waves-effect waves-float waves-light">
+                                <button type="button" class="btn btn-primary btn-next">
                                     <span class="align-middle d-sm-inline-block d-none">Next</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right align-middle ml-sm-25 ml-0">
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                        <polyline points="12 5 19 12 12 19"></polyline>
-                                    </svg>
+                                    <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
                                 </button>
+                                </div>
                             </div>
-                        </div>
-                        <div id="social-links" class="content">
-                            <div class="content-header">
-                                <h5 class="mb-0">Social Links</h5>
-                                <small>Enter Your Social Links.</small>
-                            </div>
-                            <form novalidate="novalidate">
-                                <div class="row">
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="twitter">Twitter</label>
-                                        <input type="text" id="twitter" name="twitter" class="form-control" placeholder="https://twitter.com/abc">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="facebook">Facebook</label>
-                                        <input type="text" id="facebook" name="facebook" class="form-control" placeholder="https://facebook.com/abc">
-                                    </div>
+                            <div id="social-links-vertical" class="content">
+                                <div class="content-header">
+                                <h5 class="mb-0">Gov ID's</h5>
+                                <small>Enter Your Goverment ID's Number.</small>
                                 </div>
                                 <div class="row">
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="google">Google+</label>
-                                        <input type="text" id="google" name="google" class="form-control" placeholder="https://plus.google.com/abc">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label class="form-label" for="linkedin">Linkedin</label>
-                                        <input type="text" id="linkedin" name="linkedin" class="form-control" placeholder="https://linkedin.com/abc">
-                                    </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-twitter">Adhar Card</label>
+                                    <input type="text" id="vertical-twitter" name="adharCard" class="form-control" placeholder="xxxx-xxxx-xxxx" />
                                 </div>
-                            </form>
-                            <div class="d-flex justify-content-between">
-                                <button class="btn btn-primary btn-prev waves-effect waves-float waves-light">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left align-middle mr-sm-25 mr-0">
-                                        <line x1="19" y1="12" x2="5" y2="12"></line>
-                                        <polyline points="12 19 5 12 12 5"></polyline>
-                                    </svg>
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-facebook">Pan Card</label>
+                                    <input type="text" id="vertical-facebook" name="panCard" class="form-control" placeholder="xxxxxx" />
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-google">Voter ID</label>
+                                    <input type="text" id="vertical-google" name="voterid" class="form-control" placeholder="xxxxxx" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-linkedin">Driving License</label>
+                                    <input type="text" id="vertical-linkedin" name="drivingLicense" class="form-control" placeholder="xxxxxx" />
+                                </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-primary btn-prev">
+                                    <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
                                     <span class="align-middle d-sm-inline-block d-none">Previous</span>
                                 </button>
-                                <button class="btn btn-success btn-submit waves-effect waves-float waves-light">Submit</button>
+                                <button  type="button" class="btn btn-primary btn-next">
+                                    <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                    <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
+                                </button>
+                                </div>
+                            </div>
+                            <div id="document-links-vertical" class="content">
+                                <div class="content-header">
+                                <h5 class="mb-0">Required Documents</h5>
+                                <small>Upload Your Required Documents</small>
+                                </div>
+                                <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-twitter">Upload File</label>
+                                    <input type="file" id="vertical-twitter" class="form-control" placeholder="test" />
+                                </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-primary btn-prev">
+                                    <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
+                                    <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                </button>
+                                <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
+                            </div>
+                            </form>
                             </div>
                         </div>
+                    </section>
+
+                    <!--section class="horizontal-wizard">
+                        <div class="bs-stepper horizontal-wizard-example linear">
+                            <div class="bs-stepper-header">
+                                <div class="step active" data-target="#account-details">
+                                    <button type="button" class="step-trigger" aria-selected="true">
+                                        <span class="bs-stepper-box">1</span>
+                                        <span class="bs-stepper-label">
+                                            <span class="bs-stepper-title">Account Details</span>
+                                            <span class="bs-stepper-subtitle">Setup Account Details</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="line">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right font-medium-2">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="step" data-target="#personal-info">
+                                    <button type="button" class="step-trigger" aria-selected="false" disabled="disabled">
+                                        <span class="bs-stepper-box">2</span>
+                                        <span class="bs-stepper-label">
+                                            <span class="bs-stepper-title">Personal Info</span>
+                                            <span class="bs-stepper-subtitle">Add Personal Info</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="line">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right font-medium-2">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="step" data-target="#address-step">
+                                    <button type="button" class="step-trigger" aria-selected="false" disabled="disabled">
+                                        <span class="bs-stepper-box">3</span>
+                                        <span class="bs-stepper-label">
+                                            <span class="bs-stepper-title">Address</span>
+                                            <span class="bs-stepper-subtitle">Add Address</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="line">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right font-medium-2">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="step" data-target="#social-links">
+                                    <button type="button" class="step-trigger" aria-selected="false" disabled="disabled">
+                                        <span class="bs-stepper-box">4</span>
+                                        <span class="bs-stepper-label">
+                                            <span class="bs-stepper-title">Social Links</span>
+                                            <span class="bs-stepper-subtitle">Add Social Links</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bs-stepper-content">
+                                <div id="account-details" class="content active dstepper-block">
+                                    <div class="content-header">
+                                        <h5 class="mb-0">Account Details</h5>
+                                        <small class="text-muted">Enter Your Account Details.</small>
+                                    </div>
+                                    <form novalidate="novalidate">
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="username">Username</label>
+                                                <input type="text" name="username" id="username" class="form-control error" placeholder="johndoe" aria-describedby="username-error"><span id="username-error" class="error">This field is required.</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="email">Email</label>
+                                                <input type="email" name="email" id="email" class="form-control error" placeholder="john.doe@email.com" aria-label="john.doe" aria-describedby="email-error"><span id="email-error" class="error">This field is required.</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group form-password-toggle col-md-6">
+                                                <label class="form-label" for="password">Password</label>
+                                                <input type="password" name="password" id="password" class="form-control error" placeholder="············" aria-describedby="password-error"><span id="password-error" class="error">This field is required.</span>
+                                            </div>
+                                            <div class="form-group form-password-toggle col-md-6">
+                                                <label class="form-label" for="confirm-password">Confirm Password</label>
+                                                <input type="password" name="confirm-password" id="confirm-password" class="form-control error" placeholder="············" aria-describedby="confirm-password-error"><span id="confirm-password-error" class="error">This field is required.</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-outline-secondary btn-prev waves-effect" disabled="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left align-middle mr-sm-25 mr-0">
+                                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                                <polyline points="12 19 5 12 12 5"></polyline>
+                                            </svg>
+                                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                        </button>
+                                        <button class="btn btn-primary btn-next waves-effect waves-float waves-light">
+                                            <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right align-middle ml-sm-25 ml-0">
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                <polyline points="12 5 19 12 12 19"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="personal-info" class="content">
+                                    <div class="content-header">
+                                        <h5 class="mb-0">Personal Info</h5>
+                                        <small>Enter Your Personal Info.</small>
+                                    </div>
+                                    <form novalidate="novalidate">
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="first-name">First Name</label>
+                                                <input type="text" name="first-name" id="first-name" class="form-control" placeholder="John">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="last-name">Last Name</label>
+                                                <input type="text" name="last-name" id="last-name" class="form-control" placeholder="Doe">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="country">Country</label>
+                                                <div class="position-relative"><select class="select2 w-100 select2-hidden-accessible" name="country" id="country" data-select2-id="country" tabindex="-1" aria-hidden="true">
+                                                        <option label=" " data-select2-id="2"></option>
+                                                        <option>UK</option>
+                                                        <option>USA</option>
+                                                        <option>Spain</option>
+                                                        <option>France</option>
+                                                        <option>Italy</option>
+                                                        <option>Australia</option>
+                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-country-container"><span class="select2-selection__rendered" id="select2-country-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Select value</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="language">Language</label>
+                                                <div class="position-relative"><select class="select2 w-100 select2-hidden-accessible" name="language" id="language" multiple="" data-select2-id="language" tabindex="-1" aria-hidden="true">
+                                                        <option>English</option>
+                                                        <option>French</option>
+                                                        <option>Spanish</option>
+                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="3" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false">
+                                                                <ul class="select2-selection__rendered">
+                                                                    <li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="Select value" style="width: 0px;"></li>
+                                                                </ul>
+                                                            </span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-primary btn-prev waves-effect waves-float waves-light">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left align-middle mr-sm-25 mr-0">
+                                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                                <polyline points="12 19 5 12 12 5"></polyline>
+                                            </svg>
+                                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                        </button>
+                                        <button class="btn btn-primary btn-next waves-effect waves-float waves-light">
+                                            <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right align-middle ml-sm-25 ml-0">
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                <polyline points="12 5 19 12 12 19"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="address-step" class="content">
+                                    <div class="content-header">
+                                        <h5 class="mb-0">Address</h5>
+                                        <small>Enter Your Address.</small>
+                                    </div>
+                                    <form novalidate="novalidate">
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="address">Address</label>
+                                                <input type="text" id="address" name="address" class="form-control" placeholder="98  Borough bridge Road, Birmingham">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="landmark">Landmark</label>
+                                                <input type="text" name="landmark" id="landmark" class="form-control" placeholder="Borough bridge">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="pincode1">Pincode</label>
+                                                <input type="text" id="pincode1" class="form-control" placeholder="658921">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="city1">City</label>
+                                                <input type="text" id="city1" class="form-control" placeholder="Birmingham">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-primary btn-prev waves-effect waves-float waves-light">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left align-middle mr-sm-25 mr-0">
+                                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                                <polyline points="12 19 5 12 12 5"></polyline>
+                                            </svg>
+                                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                        </button>
+                                        <button class="btn btn-primary btn-next waves-effect waves-float waves-light">
+                                            <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right align-middle ml-sm-25 ml-0">
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                <polyline points="12 5 19 12 12 19"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="social-links" class="content">
+                                    <div class="content-header">
+                                        <h5 class="mb-0">Social Links</h5>
+                                        <small>Enter Your Social Links.</small>
+                                    </div>
+                                    <form novalidate="novalidate">
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="twitter">Twitter</label>
+                                                <input type="text" id="twitter" name="twitter" class="form-control" placeholder="https://twitter.com/abc">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="facebook">Facebook</label>
+                                                <input type="text" id="facebook" name="facebook" class="form-control" placeholder="https://facebook.com/abc">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="google">Google+</label>
+                                                <input type="text" id="google" name="google" class="form-control" placeholder="https://plus.google.com/abc">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="linkedin">Linkedin</label>
+                                                <input type="text" id="linkedin" name="linkedin" class="form-control" placeholder="https://linkedin.com/abc">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-primary btn-prev waves-effect waves-float waves-light">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left align-middle mr-sm-25 mr-0">
+                                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                                <polyline points="12 19 5 12 12 5"></polyline>
+                                            </svg>
+                                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                        </button>
+                                        <button class="btn btn-success btn-submit waves-effect waves-float waves-light">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section-->
+                    <!-- /Vertical Wizard -->
+
+                </div>
+            </div>
+                
+        @endif
+      @else
+        @if(session('status') || $note)
+            <h2>Details Under Verification.</h2>
+        @else
+
+            <div class="content-wrapper">
+                
+                <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                    <div class="col-12">
+                        <h2 class="content-header-title float-left mb-0">Seller Information Portal</h2>
+                    </div>
                     </div>
                 </div>
-            </section-->
-            <!-- /Vertical Wizard -->
+                <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
+                    <div class="form-group breadcrumb-right">
+                    
+                    </div>
+                </div>
+                </div>
+                <div class="content-body">
+                    <!-- Vertical Wizard -->
+                    <section class="vertical-wizard">
+                        <div class="bs-stepper vertical vertical-wizard-example">
+                            <div class="bs-stepper-header">
+                            <div class="step" data-target="#account-details-vertical">
+                                <button type="button" class="step-trigger">
+                                <span class="bs-stepper-box">1</span>
+                                <span class="bs-stepper-label">
+                                    <span class="bs-stepper-title">Account Details</span>
+                                    <span class="bs-stepper-subtitle">Setup Account Details</span>
+                                </span>
+                                </button>
+                            </div>
+                            <div class="step" data-target="#address-step-vertical">
+                                <button type="button" class="step-trigger">
+                                <span class="bs-stepper-box">2</span>
+                                <span class="bs-stepper-label">
+                                    <span class="bs-stepper-title">Address</span>
+                                    <span class="bs-stepper-subtitle">Add Address</span>
+                                </span>
+                                </button>
+                            </div>
+                            <div class="step" data-target="#social-links-vertical">
+                                <button type="button" class="step-trigger">
+                                <span class="bs-stepper-box">3</span>
+                                <span class="bs-stepper-label">
+                                    <span class="bs-stepper-title">Gov ID's</span>
+                                    <span class="bs-stepper-subtitle">Add Gov ID's</span>
+                                </span>
+                                </button>
+                            </div>
+                            <div class="step" data-target="#document-links-vertical">
+                                <button type="button" class="step-trigger">
+                                <span class="bs-stepper-box">4</span>
+                                <span class="bs-stepper-label">
+                                    <span class="bs-stepper-title">Require Documents</span>
+                                    <span class="bs-stepper-subtitle">Upload Documents</span>
+                                </span>
+                                </button>
+                            </div>
+                            </div>
+                            <div class="bs-stepper-content">
+                            <form action="/saveSeller" method="POST">
+                            @csrf
+                            <div id="account-details-vertical" class="content">
+                                <div class="content-header">
+                                <h5 class="mb-0">Seller Account Details</h5>
+                                <small class="text-muted">Enter Your Account Details.</small>
+                                </div>
+                                <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-username">Username</label>
+                                    <input type="text" id="vertical-username" name="username" class="form-control" placeholder="johndoe" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-email">Email</label>
+                                    <input
+                                    type="email" name="email"
+                                    id="vertical-email"
+                                    class="form-control"
+                                    value="{{Auth::user()->email}}"
+                                    aria-label="john.doe" disabled
+                                    />
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="form-group form-password-toggle col-md-6">
+                                    <label class="form-label" for="vertical-password">Full Name</label>
+                                    <input
+                                    type="Text" name="fullname"
+                                    id="vertical-name"
+                                    class="form-control"
+                                    placeholder="Ram Lal"
+                                    />
+                                </div>
+                                <div class="form-group form-password-toggle col-md-6">
+                                    <label class="form-label" for="vertical-password">Initial Product Category</label>
+                                    <select class="form-control" name="productCat" id="">
+                                        <option value="Wheat">Wheat</option>
+                                        <option value="Rice">Rice</option>
+                                        <option value="Ragi">Ragi</option>
+                                        <option value="Barley">Barley</option>
+                                    </select>
+                                </div>
+                                <div class="form-group form-password-toggle col-md-6">
+                                    <label class="form-label" for="vertical-confirm-password">Phone No</label>
+                                    <input
+                                    type="number" name="phone1"
+                                    id="vertical-confirm-password"
+                                    class="form-control"
+                                    placeholder="+91"
+                                    />
+                                </div>
+                                <div class="form-group form-password-toggle col-md-6">
+                                    <label class="form-label" for="vertical-confirm-password">Alternate Phone No</label>
+                                    <input
+                                    type="number" name="phone2"
+                                    id="vertical-confirm-password"
+                                    class="form-control"
+                                    placeholder="+91"
+                                    />
+                                </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-outline-secondary btn-prev" disabled>
+                                    <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
+                                    <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-next">
+                                    <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                    <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
+                                </button>
+                                </div>
+                            </div>
+                            <div id="address-step-vertical" class="content">
+                                <div class="content-header">
+                                <h5 class="mb-0">Address</h5>
+                                <small>Enter Your Address.</small>
+                                </div>
+                                <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-address">Address</label>
+                                    <input
+                                    type="text" name="address"
+                                    id="vertical-address"
+                                    class="form-control"
+                                    placeholder="98  Borough bridge Road, Birmingham"
+                                    />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-landmark">Landmark</label>
+                                    <input type="text" name="landmark" id="vertical-landmark" class="form-control" placeholder="Borough bridge" />
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="pincode2">Pincode</label>
+                                    <input type="text" id="pincode2" name="pincode" class="form-control" placeholder="658921" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="city2">City</label>
+                                    <input type="text" id="city2" name="city" class="form-control" placeholder="Birmingham" />
+                                </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-primary btn-prev">
+                                    <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
+                                    <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-next">
+                                    <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                    <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
+                                </button>
+                                </div>
+                            </div>
+                            <div id="social-links-vertical" class="content">
+                                <div class="content-header">
+                                <h5 class="mb-0">Gov ID's</h5>
+                                <small>Enter Your Goverment ID's Number.</small>
+                                </div>
+                                <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-twitter">Adhar Card</label>
+                                    <input type="text" id="vertical-twitter" name="adharCard" class="form-control" placeholder="xxxx-xxxx-xxxx" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-facebook">Pan Card</label>
+                                    <input type="text" id="vertical-facebook" name="panCard" class="form-control" placeholder="xxxxxx" />
+                                </div>
+                                </div>
+                                <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-google">Voter ID</label>
+                                    <input type="text" id="vertical-google" name="voterid" class="form-control" placeholder="xxxxxx" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-linkedin">Driving License</label>
+                                    <input type="text" id="vertical-linkedin" name="drivingLicense" class="form-control" placeholder="xxxxxx" />
+                                </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-primary btn-prev">
+                                    <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
+                                    <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                </button>
+                                <button  type="button" class="btn btn-primary btn-next">
+                                    <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                    <i data-feather="arrow-right" class="align-middle ml-sm-25 ml-0"></i>
+                                </button>
+                                </div>
+                            </div>
+                            <div id="document-links-vertical" class="content">
+                                <div class="content-header">
+                                <h5 class="mb-0">Required Documents</h5>
+                                <small>Upload Your Required Documents</small>
+                                </div>
+                                <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="form-label" for="vertical-twitter">Upload File</label>
+                                    <input type="file" id="vertical-twitter" class="form-control" placeholder="test" />
+                                </div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                <button type="button" class="btn btn-primary btn-prev">
+                                    <i data-feather="arrow-left" class="align-middle mr-sm-25 mr-0"></i>
+                                    <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                </button>
+                                <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
+                            </div>
+                            </form>
+                            </div>
+                        </div>
+                    </section>
 
-        </div>
-      </div>
+                    <!--section class="horizontal-wizard">
+                        <div class="bs-stepper horizontal-wizard-example linear">
+                            <div class="bs-stepper-header">
+                                <div class="step active" data-target="#account-details">
+                                    <button type="button" class="step-trigger" aria-selected="true">
+                                        <span class="bs-stepper-box">1</span>
+                                        <span class="bs-stepper-label">
+                                            <span class="bs-stepper-title">Account Details</span>
+                                            <span class="bs-stepper-subtitle">Setup Account Details</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="line">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right font-medium-2">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="step" data-target="#personal-info">
+                                    <button type="button" class="step-trigger" aria-selected="false" disabled="disabled">
+                                        <span class="bs-stepper-box">2</span>
+                                        <span class="bs-stepper-label">
+                                            <span class="bs-stepper-title">Personal Info</span>
+                                            <span class="bs-stepper-subtitle">Add Personal Info</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="line">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right font-medium-2">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="step" data-target="#address-step">
+                                    <button type="button" class="step-trigger" aria-selected="false" disabled="disabled">
+                                        <span class="bs-stepper-box">3</span>
+                                        <span class="bs-stepper-label">
+                                            <span class="bs-stepper-title">Address</span>
+                                            <span class="bs-stepper-subtitle">Add Address</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="line">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right font-medium-2">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="step" data-target="#social-links">
+                                    <button type="button" class="step-trigger" aria-selected="false" disabled="disabled">
+                                        <span class="bs-stepper-box">4</span>
+                                        <span class="bs-stepper-label">
+                                            <span class="bs-stepper-title">Social Links</span>
+                                            <span class="bs-stepper-subtitle">Add Social Links</span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bs-stepper-content">
+                                <div id="account-details" class="content active dstepper-block">
+                                    <div class="content-header">
+                                        <h5 class="mb-0">Account Details</h5>
+                                        <small class="text-muted">Enter Your Account Details.</small>
+                                    </div>
+                                    <form novalidate="novalidate">
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="username">Username</label>
+                                                <input type="text" name="username" id="username" class="form-control error" placeholder="johndoe" aria-describedby="username-error"><span id="username-error" class="error">This field is required.</span>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="email">Email</label>
+                                                <input type="email" name="email" id="email" class="form-control error" placeholder="john.doe@email.com" aria-label="john.doe" aria-describedby="email-error"><span id="email-error" class="error">This field is required.</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group form-password-toggle col-md-6">
+                                                <label class="form-label" for="password">Password</label>
+                                                <input type="password" name="password" id="password" class="form-control error" placeholder="············" aria-describedby="password-error"><span id="password-error" class="error">This field is required.</span>
+                                            </div>
+                                            <div class="form-group form-password-toggle col-md-6">
+                                                <label class="form-label" for="confirm-password">Confirm Password</label>
+                                                <input type="password" name="confirm-password" id="confirm-password" class="form-control error" placeholder="············" aria-describedby="confirm-password-error"><span id="confirm-password-error" class="error">This field is required.</span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-outline-secondary btn-prev waves-effect" disabled="">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left align-middle mr-sm-25 mr-0">
+                                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                                <polyline points="12 19 5 12 12 5"></polyline>
+                                            </svg>
+                                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                        </button>
+                                        <button class="btn btn-primary btn-next waves-effect waves-float waves-light">
+                                            <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right align-middle ml-sm-25 ml-0">
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                <polyline points="12 5 19 12 12 19"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="personal-info" class="content">
+                                    <div class="content-header">
+                                        <h5 class="mb-0">Personal Info</h5>
+                                        <small>Enter Your Personal Info.</small>
+                                    </div>
+                                    <form novalidate="novalidate">
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="first-name">First Name</label>
+                                                <input type="text" name="first-name" id="first-name" class="form-control" placeholder="John">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="last-name">Last Name</label>
+                                                <input type="text" name="last-name" id="last-name" class="form-control" placeholder="Doe">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="country">Country</label>
+                                                <div class="position-relative"><select class="select2 w-100 select2-hidden-accessible" name="country" id="country" data-select2-id="country" tabindex="-1" aria-hidden="true">
+                                                        <option label=" " data-select2-id="2"></option>
+                                                        <option>UK</option>
+                                                        <option>USA</option>
+                                                        <option>Spain</option>
+                                                        <option>France</option>
+                                                        <option>Italy</option>
+                                                        <option>Australia</option>
+                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="1" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-country-container"><span class="select2-selection__rendered" id="select2-country-container" role="textbox" aria-readonly="true"><span class="select2-selection__placeholder">Select value</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="language">Language</label>
+                                                <div class="position-relative"><select class="select2 w-100 select2-hidden-accessible" name="language" id="language" multiple="" data-select2-id="language" tabindex="-1" aria-hidden="true">
+                                                        <option>English</option>
+                                                        <option>French</option>
+                                                        <option>Spanish</option>
+                                                    </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="3" style="width: auto;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1" aria-disabled="false">
+                                                                <ul class="select2-selection__rendered">
+                                                                    <li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" role="searchbox" aria-autocomplete="list" placeholder="Select value" style="width: 0px;"></li>
+                                                                </ul>
+                                                            </span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-primary btn-prev waves-effect waves-float waves-light">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left align-middle mr-sm-25 mr-0">
+                                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                                <polyline points="12 19 5 12 12 5"></polyline>
+                                            </svg>
+                                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                        </button>
+                                        <button class="btn btn-primary btn-next waves-effect waves-float waves-light">
+                                            <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right align-middle ml-sm-25 ml-0">
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                <polyline points="12 5 19 12 12 19"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="address-step" class="content">
+                                    <div class="content-header">
+                                        <h5 class="mb-0">Address</h5>
+                                        <small>Enter Your Address.</small>
+                                    </div>
+                                    <form novalidate="novalidate">
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="address">Address</label>
+                                                <input type="text" id="address" name="address" class="form-control" placeholder="98  Borough bridge Road, Birmingham">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="landmark">Landmark</label>
+                                                <input type="text" name="landmark" id="landmark" class="form-control" placeholder="Borough bridge">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="pincode1">Pincode</label>
+                                                <input type="text" id="pincode1" class="form-control" placeholder="658921">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="city1">City</label>
+                                                <input type="text" id="city1" class="form-control" placeholder="Birmingham">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-primary btn-prev waves-effect waves-float waves-light">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left align-middle mr-sm-25 mr-0">
+                                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                                <polyline points="12 19 5 12 12 5"></polyline>
+                                            </svg>
+                                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                        </button>
+                                        <button class="btn btn-primary btn-next waves-effect waves-float waves-light">
+                                            <span class="align-middle d-sm-inline-block d-none">Next</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right align-middle ml-sm-25 ml-0">
+                                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                <polyline points="12 5 19 12 12 19"></polyline>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div id="social-links" class="content">
+                                    <div class="content-header">
+                                        <h5 class="mb-0">Social Links</h5>
+                                        <small>Enter Your Social Links.</small>
+                                    </div>
+                                    <form novalidate="novalidate">
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="twitter">Twitter</label>
+                                                <input type="text" id="twitter" name="twitter" class="form-control" placeholder="https://twitter.com/abc">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="facebook">Facebook</label>
+                                                <input type="text" id="facebook" name="facebook" class="form-control" placeholder="https://facebook.com/abc">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="google">Google+</label>
+                                                <input type="text" id="google" name="google" class="form-control" placeholder="https://plus.google.com/abc">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label class="form-label" for="linkedin">Linkedin</label>
+                                                <input type="text" id="linkedin" name="linkedin" class="form-control" placeholder="https://linkedin.com/abc">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn btn-primary btn-prev waves-effect waves-float waves-light">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left align-middle mr-sm-25 mr-0">
+                                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                                <polyline points="12 19 5 12 12 5"></polyline>
+                                            </svg>
+                                            <span class="align-middle d-sm-inline-block d-none">Previous</span>
+                                        </button>
+                                        <button class="btn btn-success btn-submit waves-effect waves-float waves-light">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section-->
+                    <!-- /Vertical Wizard -->
+
+                </div>
+            </div>
+                
+        @endif                                        
+      @endif
     </div>
     <!-- END: Content-->
 
