@@ -58,7 +58,6 @@
               <th>Email</th>
               <th>Account Status</th>
               <th>Registered On</th>
-              <th>Approve</th>
               <th>Delete</th>
             </tr>
           </thead>
@@ -76,11 +75,6 @@
               </td>
               <td>{{$s->created_at}}</td>
               <td>
-                          <a href="/admin/seller/approve/{{ $s->email }}" type="button" class="btn btn-success">
-                                  Approve
-                          </a>
-              </td>
-              <td>
                           <form action="/admin/seller/delete/{{ $s->email }}" method="post">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
@@ -93,7 +87,7 @@
           </tbody>
         </table>
         @else
-          <center><h2>No Request Pending</h2></center>
+          <center><h2>No Seller Available in System.</h2></center>
           @endif
       </div>
     </div>

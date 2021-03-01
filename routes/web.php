@@ -29,6 +29,13 @@ Route::post('logout', 'Main\MainController@logout')->name('user.logout');
 //Admin
 Route::get('/admin/home', 'Admin\AdminController@home')->name('AdminHome');
 Route::get('/seller-list', 'Admin\AdminController@SellerList');
+Route::get('/admin/approved/sellerlist', 'Admin\AdminController@SellerTotalList');
+Route::delete('/admin/seller/delete/{email}', 'Admin\AdminController@deleteSeller');
+Route::get('/admin/seller/approve/{email}', 'Admin\AdminController@approveSeller');
+Route::get('/admin/sellerDetail/{email}', 'Admin\AdminController@SellerDetails');
+
+
+
 
 
 //Seller

@@ -59,16 +59,51 @@ class SellerController extends Controller
         $panCard = $request->input('panCard');
         $voterid = $request->input('voterid');
         $drivingLicense = $request->input('drivingLicense');
-        $docfront = $request->input('docfront');
-        $docback = $request->input('docback');
-        $pandoc = $request->input('pandoc');
+        //$docfront = 'test';
+        //$docback = $request->input('docback');
+        //$pandoc = $request->input('pandoc');
         $created_at = new \DateTime();
         $updated_at = new \DateTime();
 
+        $this->validate($request, [
+            'docfront' => 'required|file|mimes:jpeg,png,pdf,doc,docx,jpg|max:2048',
+        ]);
+    
+        if ($request->hasFile('docfront')) {
+            $image = $request->file('docfront');
+            $docfront = time().'-AdharFront'.'.'.$image->getClientOriginalExtension();
+            $destinationPath = public_path('/DigitalLibrary');
+            $image->move($destinationPath, $docfront);
+        }
+
+        $this->validate($request, [
+            'docback' => 'required|file|mimes:jpeg,png,pdf,doc,docx,jpg|max:2048',
+        ]);
+    
+        if ($request->hasFile('docback')) {
+            $image2 = $request->file('docback');
+            $docback = time().'-AdharBack'.'.'.$image2->getClientOriginalExtension();
+            $destinationPath = public_path('/DigitalLibrary');
+            $image2->move($destinationPath, $docback);
+        }
+
+        $this->validate($request, [
+            'pandoc' => 'required|file|mimes:jpeg,png,pdf,doc,docx,jpg|max:2048',
+        ]);
+    
+        if ($request->hasFile('pandoc')) {
+            $image3 = $request->file('pandoc');
+            $pandoc = time().'-PanCard'.'.'.$image3->getClientOriginalExtension();
+            $destinationPath = public_path('/DigitalLibrary');
+            $image3->move($destinationPath, $pandoc);
+        }
+        
+
         $data=array('email'=>$email,'username'=>$username, 'fullname'=>$fullname,'productCat'=>$productCat, 'phone1'=>$phone1, 'phone2'=>$phone2, 'address'=>$address, 'pincode'=>$pincode, 'city'=>$city, 'landmark'=>$landmark, 'adharCard'=>$adharCard, 'PanCard'=>$adharCard, 'VoterID'=>$voterid, 'drivingLicence' =>$drivingLicense, 'adharfront' =>$docfront, 'adharback' =>$docback, 'pancarddoc' =>$pandoc, 'created_at'=>$created_at, 'updated_at'=>$updated_at);
         DB::table('sellers')->insert($data);
+        
+       return redirect()->back()->with('status', 'Details Updated');
 
-        return redirect()->back()->with('status', 'Details Updated');
-
+        
     }
 }
