@@ -50,7 +50,7 @@
             <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                <h4 class="card-title">Details for Seller with Email: {{$data[0]->email}}, Seller Account Status: <span style="color:red; font-weight:bold;">{{$data2[0]->accountstatus}}</span></h4>
+                <h4 class="card-title">Details for Seller with Email: {{$data[0]->email}}, Seller Account Status: @if($data2[0]->accountstatus == 'Approved')<span style="color:green; font-weight:bold;"> @else<span style="color:red; font-weight:bold;"> @endif {{$data2[0]->accountstatus}}</span></h4>
                 <div class="heading-elements">
                     <ul class="list-inline mb-0">
                     <li>
@@ -153,9 +153,13 @@
                             </tr>
                             <tr>
                                 <td>
+                                @if($data2[0]->accountstatus == 'Not Approved')
                                     <a href="/admin/seller/approve/{{ $data[0]->email }}" type="button" class="btn btn-success">
                                             Approve
                                     </a>
+                                @else 
+                                    <a>Account is Already Approved</a>
+                                @endif
                                 </td>
                                 <td>
                                             <form action="/admin/seller/delete/{{ $data[0]->email }}" method="post">

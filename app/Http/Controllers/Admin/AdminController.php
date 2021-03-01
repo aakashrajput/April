@@ -42,7 +42,7 @@ class AdminController extends Controller
         DB::delete('delete from users where email = ?',[$email]);
         DB::delete('delete from sellers where email=?',[$semail]);
 
-        return redirect()->back()->with('status', 'Seller Account Deleted Succesfully');
+        return view('Admin.Seller.List')->with('status', 'Seller Account Deleted Succesfully');
     }
 
     public function approveSeller(Request $request, $email) 

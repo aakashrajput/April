@@ -1,1 +1,6 @@
-<h1>Dashboard Test</h1>
+@extends('layouts.SellerDashboard')
+
+@section('content')
+
+
+@endsection
