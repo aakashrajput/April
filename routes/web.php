@@ -33,6 +33,11 @@ Route::get('/admin/approved/sellerlist', 'Admin\AdminController@SellerTotalList'
 Route::delete('/admin/seller/delete/{email}', 'Admin\AdminController@deleteSeller');
 Route::get('/admin/seller/approve/{email}', 'Admin\AdminController@approveSeller');
 Route::get('/admin/sellerDetail/{email}', 'Admin\AdminController@SellerDetails');
+Route::get('/admin/product/approval', 'Admin\AdminController@ProductApproveList');
+Route::get('/admin/product/live', 'Admin\AdminController@ProductLiveList');
+Route::get('/admin/product/approve/{productid}', 'Admin\AdminController@ProductApprove');
+Route::delete('/admin/product/delete/{productid}', 'Admin\AdminController@ProductDelete');
+Route::get('/admin/product/{productid}', 'Admin\AdminController@ProductDetail');
 
 
 

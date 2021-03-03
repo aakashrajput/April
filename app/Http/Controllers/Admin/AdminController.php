@@ -59,4 +59,42 @@ class AdminController extends Controller
         $data2 = DB::select('select * from users where email = ?',[$email]);
         return view('admin.seller.SellerDetails')->with(compact('data','data2')); 
     }
+
+
+    //Product Approval //
+
+    public function ProductApproveList()
+    {
+        $status = 'Not Approved';
+        $product = DB::select('select * from products where productstatus = ?',[$status]);
+        return view('admin.product.alist')->with(compact('product'));
+    }
+
+    public function ProductLiveList()
+    {
+        $status = 'Approved';
+        $product = DB::select('select * from products where productstatus = ?',[$status]);
+        return view('admin.product.list')->with(compact('product'));
+    }
+
+    public function ProductApprove(Request $request, $productid) 
+    {
+        $accounttype = 'Approved';
+        $updated_at = new \DateTime();
+        DB::update('update products set productstatus = ?,updated_at=? where productid = ?',[$accounttype,$updated_at,$productid]);
+        return redirect('/admin/product/approve')->with('status', 'Product Approved Succesfully');
+    }
+
+    public function ProductDelete(Request $request, $productid) 
+    {
+        DB::delete('delete from products where productid=?',[$productid]);
+
+        return view('Admin.product.alist')->with('status', 'Product Deleted Succesfully');
+    }
+
+    public function ProductDetail(Request $request, $productid)
+    {
+        $product = DB::select('select * from products where productid = ?',[$productid]);
+        return view('admin.product.detail')->with(compact('product'));
+    }
 }

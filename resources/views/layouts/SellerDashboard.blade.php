@@ -34,6 +34,13 @@
     <link rel="stylesheet" type="text/css" href="../../app-assets/css/plugins/charts/chart-apex.min.css">
     <link rel="stylesheet" type="text/css" href="../../app-assets/css/plugins/extensions/ext-component-toastr.min.css">
     <link rel="stylesheet" type="text/css" href="../../app-assets/css/loader.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/app-ecommerce-details.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/forms/form-number-input.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/extensions/ext-component-toastr.min.css">
+    
+    <script src="../../../app-assets/js/scripts/pages/app-ecommerce-details.min.js"></script>
+    <script src="../../../app-assets/js/scripts/forms/form-number-input.min.js"></script>
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->

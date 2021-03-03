@@ -34,6 +34,13 @@
     <link rel="stylesheet" type="text/css" href="../../app-assets/css/plugins/charts/chart-apex.min.css">
     <link rel="stylesheet" type="text/css" href="../../app-assets/css/plugins/extensions/ext-component-toastr.min.css">
     <link rel="stylesheet" type="text/css" href="../../app-assets/css/loader.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/app-ecommerce-details.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/forms/form-number-input.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/extensions/ext-component-toastr.min.css">
+    
+    <script src="../../../app-assets/js/scripts/pages/app-ecommerce-details.min.js"></script>
+    <script src="../../../app-assets/js/scripts/forms/form-number-input.min.js"></script>
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -383,6 +390,19 @@
               <li><a class="d-flex align-items-center" href="/seller-list"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Approval Requests</span></a>
               </li>
               <li><a class="d-flex align-items-center" href="/admin/approved/sellerlist"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Preview">List</span></a>
+              </li>
+            </ul>
+          </li>
+
+          <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">Product &amp; Listning</span><i data-feather="more-horizontal"></i>
+          </li>
+          <!--li class=" nav-item"><a class="d-flex align-items-center" href="/seller-list"><i data-feather="user"></i><span class="menu-title text-truncate" data-i18n="Email">Seller Approvals</span></a>
+          </li-->
+          <li class=" nav-item"><a class="d-flex align-items-center" href="#"><i data-feather="shopping-cart"></i><span class="menu-title text-truncate" data-i18n="eCommerce">Products</span></a>
+            <ul class="menu-content">
+              <li><a class="d-flex align-items-center" href="/admin/product/approval"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="List">Approval Requests</span></a>
+              </li>
+              <li><a class="d-flex align-items-center" href="/admin/product/live"><i data-feather="circle"></i><span class="menu-item text-truncate" data-i18n="Preview">Live Products</span></a>
               </li>
             </ul>
           </li>

@@ -1,4 +1,4 @@
-@extends('layouts.SellerDashboard')
+@extends('layouts.admin')
 
 @section('content')
 
@@ -11,10 +11,10 @@
           <div class="content-header-left col-md-9 col-12 mb-2">
             <div class="row breadcrumbs-top">
               <div class="col-12">
-                <h2 class="content-header-title float-left mb-0">Products Lists</h2>
+                <h2 class="content-header-title float-left mb-0">Products Approval Lists</h2>
                 <div class="breadcrumb-wrapper">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="/seller/home">Home</a>
+                    <li class="breadcrumb-item"><a href="/admin/home">Home</a>
                     </li>
                     <li class="breadcrumb-item active">Products
                     </li>
@@ -37,7 +37,7 @@
   <div class="col-12">
     <div class="card">
       <div class="card-header">
-        <h4 class="card-title">Listed Products Lists</h4>
+        <h4 class="card-title">Listed Products Lists for Approval</h4>
       </div>
       
       @if (session('status'))
@@ -50,7 +50,7 @@
       @endif
       <div class="table-responsive">
       
-      @if($products)
+      @if($product)
         <table class="table">
           <thead>
             <tr>
@@ -62,19 +62,20 @@
               <th>Product Qty</th>
               <th>Added On</th>
               <th>Product Status</th>
+              <th>Approve</th>
               <th>Delete</th>
             </tr>
           </thead>
           <tbody>
-          @foreach($products as $p)
+          @foreach($product as $p)
             <tr>
               <td>
               <a href=""><img src="../../Product-img/{{$p->productimg}}" class="mr-75" height="50" width="50" ></a>
               </td>
               <td>
-              <a href="">{{$p->productname}}</a>
+              <a href="/admin/product/{{$p->productid}}">{{$p->productname}}</a>
               </td>
-              <td><a href="">
+              <td><a href="/admin/product/{{$p->productid}}">
                 {{$p->productid}}</a>
               </td>
               <td>
@@ -87,7 +88,12 @@
               <span class="badge badge-pill badge-light-primary mr-1">{{$p->productstatus}}</span>
               </td>
               <td>
-                          <form action="/seller/product/delete/{{ $p->productid }}" method="post">
+                          <a href="/admin/product/approve/{{ $p->productid }}" type="button" class="btn btn-success">
+                                  Approve
+                          </a>
+              </td>
+              <td>
+                          <form action="/admin/product/delete/{{ $p->productid }}" method="post">
                             {{ csrf_field() }}
                             {{ method_field('DELETE') }}
                             <button type="submit" class="btn btn-danger waves-effect waves-float waves-light">Delete</button>
@@ -99,7 +105,7 @@
           </tbody>
         </table>
         @else
-          <center><h2>No Seller Available in System.</h2></center>
+          <center><h2>No Product for Approval Available in System.</h2></center>
           @endif
       </div>
     </div>
