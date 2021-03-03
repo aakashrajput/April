@@ -21,7 +21,9 @@ Route::get('/', 'Main\MainController@loginPage')->name('mainloginPage');
 //login & Logout
 Route::post('/login', 'Main\MainController@Mainlogin')->name('mainlogin');
 Route::get('/SellerRegister', 'Main\MainController@SellerRegister')->name('sreg');
+Route::get('/BuyerRegister', 'Main\MainController@BuyerRegister')->name('breg');
 Route::post('/SRegister', 'Main\MainController@SellerRegisterSubmit')->name('sellerregister');
+Route::post('/BRegister', 'Main\MainController@BuyerRegisterSubmit')->name('buyerregister');
 Route::post('logout', 'Main\MainController@logout')->name('user.logout');
 
 
@@ -50,6 +52,10 @@ Route::get('/seller/product/add', 'Seller\SellerController@productadd');
 Route::post('/seller/product/submit', 'Seller\SellerController@productsubmit');
 Route::get('/seller/product/list', 'Seller\SellerController@productlist');
 Route::delete('/seller/product/delete/{productid}', 'Seller\SellerController@deleteProduct');
+
+//Buyer
+Route::get('/buyer/home', 'Buyer\BuyerController@home');
+
 
 
 

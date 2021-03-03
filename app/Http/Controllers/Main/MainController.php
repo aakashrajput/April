@@ -51,6 +51,13 @@ class MainController extends Controller
        
       }
 
+      public function BuyerRegister(Request $request)
+      {
+          App::setlocale('in');
+          return view('BuyerRegister');
+       
+      }
+
       public function SellerRegisterSubmit(Request $request)
     {
 
@@ -77,6 +84,35 @@ class MainController extends Controller
         auth()->login($seller);
 
         return redirect('/seller/home');
+
+    }
+
+    public function BuyerRegisterSubmit(Request $request)
+    {
+
+        $this->validate(request(), [
+            'name' => 'required',
+            'email' => 'required|email',
+            'password' => 'required'
+        ]);
+
+       
+        $email = $request->input('email');
+        $name = $request->input('name');
+        $user_type="Buyer";
+        $accounttype = 'Approved';
+        
+        $buyer =  User::create(request(['name', 'email', 'password', 'user_type']));
+        DB::update('update users set accountstatus = ? where email = ?',[$accounttype, $email]);
+
+
+
+        //Mail::to($email)->send(new EmployeeReg());
+        //$dat = new EmployeeReg(); // sendgrid_api
+        //$dat->send($request);
+        auth()->login($buyer);
+
+        return redirect('/buyer/home');
 
     }
 

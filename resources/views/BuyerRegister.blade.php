@@ -1,7 +1,9 @@
-@extends('layouts.main')
+@extends('layouts.BuyerRegister')
 
 @section('content')
-<body class="vertical-layout vertical-menu-modern blank-page navbar-floating footer-static   menu-collapsed" data-open="click" data-menu="vertical-menu-modern" data-col="blank-page">
+
+  <!-- BEGIN: Body-->
+  <body class="vertical-layout vertical-menu-modern blank-page navbar-floating footer-static   menu-collapsed" data-open="click" data-menu="vertical-menu-modern" data-col="blank-page">
     <!-- BEGIN: Content-->
     <div class="app-content content ">
       <div class="content-overlay"></div>
@@ -36,67 +38,100 @@
                     </g>
                   </g>
                 </svg>
-                <h2 class="brand-text text-primary ml-1">April</h2></a>
+                <h2 class="brand-text text-primary ml-1">AprilCommerce</h2></a>
               <!-- /Brand logo-->
               <!-- Left Text-->
               <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
-                <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="../../app-assets/images/illustration/login-vec.png" alt="Login V2"/></div>
+                <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="../../app-assets/images/pages/register-v2.svg" alt="Register V2"/></div>
               </div>
               <!-- /Left Text-->
-              <!-- Login-->
+              <!-- Register-->
+            
               <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
+              <!--ul class="nav navbar-nav align-items-center ml-auto">
+                <li class="nav-item dropdown dropdown-language">Change language
+                @php $locale = session()->get('locale'); @endphp
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            @switch($locale)
+                                @case('us')
+                                <i class="flag-icon flag-icon-us"></i>English
+                                @break
+                                @case('in')
+                                <i class="flag-icon flag-icon-in"></i>Hindi
+                                @break
+                                @default
+                                <i class="flag-icon flag-icon-in"></i>Hindi
+                            @endswitch
+                            <span class="caret"></span>
+                        </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-flag">
+                    <a class="dropdown-item" href="{{ url('locale/in') }}" data-language="in"><i class="flag-icon flag-icon-in"></i>Hindi</a>
+                    <a class="dropdown-item" href="{{ url('locale/en') }}" data-language="in"><i class="flag-icon flag-icon-us"></i>English</a>
+                                
+                    </div>
+                </li>
+             <ul-->
                 <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
-                  <h2 class="card-title font-weight-bold mb-1">Welcome to April! 👋</h2>
-                  <p class="card-text mb-2">Please sign-in to your account and start the adventure</p>
-                  <form class="auth-login-form mt-2" action="/login" method="POST">
-                  @csrf
-                  @if($errors->any())
-                  <div class="alert alert-danger" role="alert">{{$errors->first()}}</div>
-                  @endif
-                  @if (session('sstatus'))
-                  <div class="alert alert-success" role="alert">
-                      {{ session('sstatus') }}
-                  </div>
-                  @endif
+                  <h2 class="card-title font-weight-bold mb-1">{{__('Buyers Adventure starts here 🚀')}}</h2>
+                  
+                  <p class="card-text mb-2">{{__("Make your app Selling management easy and fun!")}}</p>
+                  <form method="POST" action="{{ route('buyerregister') }}">
+                        @csrf
                     <div class="form-group">
-                      <label class="form-label" for="login-email">Email</label>
-                      <input class="form-control  @error('email') is-invalid @enderror" id="login-email" type="text" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus/>
-                                @error('email')
+                      <label class="form-label" for="register-username">{{__('lang.FullName')}}</label>
+                      <input type="text" value="Seller" name="user_type" hidden>
+                      <input class="form-control" id="register-username" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus />
+                      @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                      @enderror
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="register-email">{{__('lang.Email')}}</label>
+                      <input class="form-control" id="register-email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" />
+                      @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                     </div>
                     <div class="form-group">
-                      <div class="d-flex justify-content-between">
-                        <label for="login-password">Password</label><a href="page-auth-forgot-password-v2.html"><small>Forgot Password?</small></a>
-                      </div>
+                      <label class="form-label" for="register-password">{{__('lang.Password')}}</label>
                       <div class="input-group input-group-merge form-password-toggle">
-                        <input class="form-control form-control-merge" id="login-password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" tabindex="2"/>
-                                @error('password')
+                        <input class="form-control form-control-merge" id="register-password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password"/>
+                        <div class="input-group-append"><span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span></div>
+                        @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
-                                @enderror
+                        @enderror
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="register-password">{{__('Confirm Password')}}</label>
+                      <div class="input-group input-group-merge form-password-toggle">
+                        <input class="form-control form-control-merge" id="register-password" type="password" name="password_confirmation" required autocomplete="new-password" placeholder="············" aria-describedby="register-password" tabindex="3"/>
                         <div class="input-group-append"><span class="input-group-text cursor-pointer"><i data-feather="eye"></i></span></div>
                       </div>
                     </div>
                     <div class="form-group">
                       <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input"  name="remember" id="remember" {{ old('remember') ? 'checked' : '' }} type="checkbox" tabindex="3"/>
-                        <label class="custom-control-label"  for="remember"> Remember Me</label>
+                        <input class="custom-control-input" id="register-privacy-policy" type="checkbox" tabindex="4"/>
+                        <label class="custom-control-label" for="register-privacy-policy">I agree to<a href="javascript:void(0);">&nbsp;privacy policy & terms</a></label>
                       </div>
                     </div>
-                    <button class="btn btn-primary btn-block" tabindex="4">Sign in</button>
+                    <button class="btn btn-primary btn-block" type="submit" tabindex="5">{{__('lang.Signup')}}</button>
                   </form>
-                  <p class="text-center mt-2"><span>Want to Sell on our platform?</span><a href="SellerRegister"><span>&nbsp;Create an account</span></a> OR <a href="BuyerRegister"><span>&nbsp;Register as Buyer</span></a></p>
+                  <p class="text-center mt-2"><span>Already have an account?</span><a href="/"><span>&nbsp;Sign in instead</span></a></p>
                   <div class="divider my-2">
                     <div class="divider-text">or</div>
                   </div>
                   <div class="auth-footer-btn d-flex justify-content-center"><a class="btn btn-facebook" href="javascript:void(0)"><i data-feather="facebook"></i></a><a class="btn btn-twitter white" href="javascript:void(0)"><i data-feather="twitter"></i></a><a class="btn btn-google" href="javascript:void(0)"><i data-feather="mail"></i></a><a class="btn btn-github" href="javascript:void(0)"><i data-feather="github"></i></a></div>
                 </div>
               </div>
-              <!-- /Login-->
+              <!-- /Register-->
             </div>
           </div>
         </div>
@@ -119,7 +154,7 @@
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="../../app-assets/js/scripts/pages/page-auth-login.js"></script>
+    <script src="../../app-assets/js/scripts/pages/page-auth-register.min.js"></script>
     <!-- END: Page JS-->
 
     <script>
@@ -129,6 +164,6 @@
         }
       })
     </script>
-</body>
-@endsection
- 
+  </body>
+  <!-- END: Body-->
+  @endsection
