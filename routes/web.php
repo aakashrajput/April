@@ -41,6 +41,10 @@ Route::get('/admin/sellerDetail/{email}', 'Admin\AdminController@SellerDetails')
 //Seller
 Route::post('/saveSeller', 'Seller\SellerController@SaveSeller');
 Route::get('/seller/home', 'Seller\SellerController@home');
+Route::get('/seller/product/add', 'Seller\SellerController@productadd');
+Route::post('/seller/product/submit', 'Seller\SellerController@productsubmit');
+Route::get('/seller/product/list', 'Seller\SellerController@productlist');
+Route::delete('/seller/product/delete/{productid}', 'Seller\SellerController@deleteProduct');
 
 
 

@@ -106,4 +106,60 @@ class SellerController extends Controller
 
         
     }
+
+    public function productadd()
+    {
+        return view('Seller.product.add');
+    }
+
+    public function productsubmit(Request $request)
+    {
+        $productname = $request->input('productname');
+        $productID = 'PID'.time().rand(10,100);
+        $productcat = $request->input('productcat');
+        $productdetails = $request->input('productdetails');
+        $productprice = $request->input('productprice');
+        $productqty = $request->input('productqty');
+        $productunit = $request->input('productunit');
+        //$productimg = $request->input('productimg');
+        $listedby =  Auth::user()->email;
+        $sellerid = Auth::user()->id;
+        $sellername = Auth::user()->name;
+        $created_at = new \DateTime();
+        $updated_at = new \DateTime();
+
+        $this->validate($request, [
+            'productimg' => 'required|file|mimes:jpeg,png,pdf,doc,docx,jpg|max:2048',
+        ]);
+    
+        if ($request->hasFile('productimg')) {
+            $image3 = $request->file('productimg');
+            $productimg = time().'-PIMG'.'.'.$image3->getClientOriginalExtension();
+            $destinationPath = public_path('/Product-img');
+            $image3->move($destinationPath, $productimg);
+        }
+
+        $data=array('productname'=>$productname, 'productid' => $productID, 'productcat'=>$productcat, 'productdetails'=>$productdetails,'productprice'=>$productprice, 'productqty'=>$productqty, 'productunit'=>$productunit, 'productimg'=>$productimg, 'listedby'=>$listedby, 'sellername'=>$sellername, 'sellerid'=>$sellerid, 'created_at'=>$created_at, 'updated_at'=>$updated_at);
+        DB::table('products')->insert($data);
+
+        return redirect('/seller/product/list')->with('status','Product Added Successfully waiting for Admin Approval');
+    }
+
+    public function productlist()
+    {
+        $listedby =  Auth::user()->email;
+        $sellerid = Auth::user()->id;
+        $sellername = Auth::user()->name;   
+        $products = DB::select('select * from products where listedby = ? AND sellerid = ?',[$listedby, $sellerid]);
+
+        return view('Seller.product.list')->with(compact('products'));
+
+    }
+
+    public function deleteProduct(Request $request, $productid) 
+    {
+        DB::delete('delete from products where productid = ?',[$productid]);
+
+        return redirect()->back()->with('status', 'Product Deleted Succesfully');
+    }
 }
