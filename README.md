@@ -3,4 +3,4 @@ Farmer Supplier Application
 
 
 # Working Diagram
-<img src="https://i.ibb.co/d5s06XS/april.jpg" alt="april" border="0"></a><br />
+<embed src="https://github.com/apcomm/April/blob/6eb53fe3a4a3021e9758b330c830a719203403f3/april%20(2).pdf" width="1800px" height="800px" />
